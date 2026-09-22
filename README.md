@@ -1,14 +1,14 @@
-Install dependencies on Ubuntu:
+    Install dependencies on Ubuntu:
 
-sudo apt update
+    sudo apt update
 
-sudo apt install \
-    build-essential \
-    rdma-core \
-    ibverbs-utils \
-    librdmacm-dev \
-    libibverbs-dev \
-    infiniband-diags
+    sudo apt install \
+        build-essential \
+        rdma-core \
+        ibverbs-utils \
+        librdmacm-dev \
+        libibverbs-dev \
+        infiniband-diags
 
     Verify RoCE hardware
 
@@ -47,4 +47,17 @@ sudo apt install \
       UE   : 100
       QFI  : 9
       Size : 1024
+
+    Test the ORAN implementation
+    
+    Run receiver:
+    
+        sudo ./build/oran/oran_rdma_rx \
+            192.168.200.20
+            
+    Sender:
+    
+        sudo ./build/oran/oran_rdma_tx \
+            192.168.200.20
+     
     
